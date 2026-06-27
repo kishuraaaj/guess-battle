@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Battle</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🎮 GUESS BATTLE 🎮</h1>
+        <p class="subtitle">
+            Challenge your friend and guess each other's secret number!
+        </p>
+
+        <!-- ========================= -->
+        <!-- Secret Number Setup -->
+        <!-- ========================= -->
+
+        <div id="setup">
+
+            <div class="player-box">
+
+                <h2>Player A</h2>
+
+                <input
+                    type="password"
+                    id="secretA"
+                    min="1"
+                    max="100"
+                    placeholder="Choose a number (1-100)"
+                >
+
+            </div>
+
+            <div class="player-box">
+
+                <h2>Player B</h2>
+
+                <input
+                    type="password"
+                    id="secretB"
+                    min="1"
+                    max="100"
+                    placeholder="Choose a number (1-100)"
+                >
+
+            </div>
+
+            <button id="startBtn">
+                Start Game
+            </button>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Game Area -->
+        <!-- ========================= -->
+
+        <div id="gameArea" style="display:none;">
+
+            <div class="players">
+
+                <!-- Player A -->
+
+                <div class="player-card">
+
+                    <h2>Player A</h2>
+
+                    <input
+                        type="number"
+                        id="guessA"
+                        placeholder="Guess Player B's Number"
+                    >
+
+                    <button id="btnA">
+                        Guess
+                    </button>
+
+                    <h3>Hint</h3>
+
+                    <p id="hintA">---</p>
+
+                    <p>
+                        Attempts :
+                        <span id="attemptA">
+                            0
+                        </span>
+                    </p>
+
+                </div>
+
+                <!-- Player B -->
+
+                <div class="player-card">
+
+                    <h2>Player B</h2>
+
+                    <input
+                        type="number"
+                        id="guessB"
+                        placeholder="Guess Player A's Number"
+                    >
+
+                    <button id="btnB">
+                        Guess
+                    </button>
+
+                    <h3>Hint</h3>
+
+                    <p id="hintB">---</p>
+
+                    <p>
+                        Attempts :
+                        <span id="attemptB">
+                            0
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Winner -->
+
+        <div id="winnerBox">
+
+            <h2 id="winnerText"></h2>
+
+            <button id="restartBtn">
+
+                Play Again
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="project.js"></script>
+
+</body>
+</html>

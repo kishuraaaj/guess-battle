@@ -1,0 +1,212 @@
+/* ===========================
+   GUESS BATTLE - STYLE.CSS
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    text-align:center;
+}
+
+h1{
+    font-size:50px;
+    color:#00ffd5;
+    margin-bottom:10px;
+    text-shadow:0 0 15px #00ffd5;
+}
+
+.subtitle{
+    color:#ddd;
+    margin-bottom:35px;
+    font-size:18px;
+}
+
+/* ===========================
+   SETUP SECTION
+=========================== */
+
+#setup{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.player-box{
+    background:#1c1c1c;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,255,213,.3);
+}
+
+.player-box h2{
+    color:#00ffd5;
+    margin-bottom:15px;
+}
+
+.player-box input{
+    width:100%;
+    padding:14px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+}
+
+#startBtn{
+    padding:15px;
+    background:#00ffd5;
+    color:black;
+    border:none;
+    border-radius:10px;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:bold;
+}
+
+#startBtn:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   GAME AREA
+=========================== */
+
+.players{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.player-card{
+    width:420px;
+    background:#1c1c1c;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,255,213,.25);
+}
+
+.player-card h2{
+    color:#00ffd5;
+    margin-bottom:20px;
+}
+
+.player-card input{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+.player-card button{
+    width:100%;
+    padding:14px;
+    background:#00ffd5;
+    border:none;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.player-card button:hover{
+    transform:scale(1.05);
+}
+
+.player-card h3{
+    margin-top:20px;
+    color:#ffd700;
+}
+
+.player-card p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+#hintA,
+#hintB{
+    font-size:24px;
+    font-weight:bold;
+    color:#00ff90;
+}
+
+/* ===========================
+   WINNER
+=========================== */
+
+#winnerBox{
+    display:none;
+    margin-top:40px;
+}
+
+#winnerText{
+    font-size:38px;
+    color:#ffd700;
+    margin-bottom:20px;
+    text-shadow:0 0 12px gold;
+}
+
+#restartBtn{
+    padding:15px 30px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#ff4757;
+    color:white;
+    transition:.3s;
+}
+
+#restartBtn:hover{
+    transform:scale(1.08);
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:34px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .players{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .player-card{
+        width:100%;
+    }
+
+    .container{
+        width:100%;
+    }
+}
